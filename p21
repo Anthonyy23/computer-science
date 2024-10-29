@@ -3,9 +3,9 @@
 #Date: October 29th 2024
 #This shows the AND gate
 
-b1 = int(input("Enter 0 for false, 1 for true: "))
-b2 = int(input("Enter 0 for false, 1 for true: "))
-if(b2 == b1 and b1 > 0 and b2 > 0):
+in1 = Boolean(input("Enter True or False: "))
+in2 = Boolean(input("Enter True or False: "))
+if(in1 == True and in2 == True):
   print("True")
 else:
   print("False")
