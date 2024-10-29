@@ -3,6 +3,6 @@
 #Date: October 29th 2024
 #This shows the AND gate
 
-ln1 = Boolean(input("True or False"))
-ln2 = Boolean(input("True or False"))
+ln1 = True
+ln2 = True
 (not(ln1 and ln2))
