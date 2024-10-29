@@ -3,10 +3,9 @@
 #Date: October 29th 2024
 #This shows the AND gate
 
-b1 = input("Enter True or False: ")
-b2 = input("Enter True or False again: ")
-if(b1 == "True"):
-  if(b2 == "True"):
-     print("True")
-  else:
-     print("False")
+b1 = int(input("Enter 0 for false, 1 for true: "))
+b2 = int(input("Enter 0 for false, 1 for true: "))
+if(b2 == b1 and b1 > 0 and b2 > 0):
+  print("True")
+else:
+  print("False")
