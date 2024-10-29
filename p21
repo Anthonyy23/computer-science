@@ -3,9 +3,10 @@
 #Date: October 29th 2024
 #This shows the AND gate
 
-in1 = Boolean(input("Enter True or False: "))
-in2 = Boolean(input("Enter True or False: "))
-if(in1 == True and in2 == True):
-  print("True")
-else:
-  print("False")
+for i in range(4):
+  a = input("Enter 0 or 1: ")
+  a = input("Enter 0 or 1: ")
+  if a == "True" and b == "True":
+    return True
+  else:
+    return False
