@@ -5,7 +5,7 @@
 
 b1 = Boolean(input("Enter True or False: "))
 b2 = Boolean(input("Enter True or False again: "))
-if(b1 == True and b2 == True):
-  return True
+if(b1 and b2 == True):
+  print("True")
 else:
-  return False
+  print("False")
