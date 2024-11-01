@@ -1,8 +1,21 @@
 #Name: Anthony Youdakhin
 #Email: ANTHONY.YOUDAKHIN83@myHunter.cuny.edu
 #Date: November 1st 2024
-#Logical expressions for a 4-bit incrementer
+#Turtle Control
 
-out1 = in1 and in2
-out2 = not(in1 and in2) and (in1 or in2)
-out3 = not(in2)
+import turtle
+screen = turtle.Screen()
+t1 = turtle.Turtle()
+
+turtle_control = input("Enter B, S, l, r, p in any amount and order: ")
+for i in range(len(turtle_control)):
+  if(turtle_control[i] == 'B'):
+    t1.backward(50)
+  if(turtle_control[i] == 'S'):
+    t1.stamp()
+  if(turtle_control[i] == 'l'):
+    t1.left(45)
+  if(turtle_control[i] == 'r'):
+    t1.right(45)
+  if(turtle_control[i] == 'p'):
+    t1.color("purple")
