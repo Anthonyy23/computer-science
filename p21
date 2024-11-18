@@ -1,6 +1,28 @@
-#Name: Anthony Youdakhin
-#Email: ANTHONY.YOUDAKHIN83@myHunter.cuny.edu
-#Date: November 1st 2024
-#Account name for my GitHub account
-
-Anthonyy23
+# Name: Anthony Youdakhin
+# Email: ANTHONY.YOUDAKHIN83@myhunter.cuny.edu
+# Date11/18/24
+# blue image program
+import matplotlib.pyplot as plt 
+import numpy as np
+from matplotlib import image as mping
+# Step 1: Ask the user for the name of the input file and output file
+input_filename = input("Enter name of the input file: ")
+output_filename = input("Enter name of the output file: ")
+# Step 2: Load the image
+try:
+img = mpimg. imread (input_filename)
+except FileNotFoundError:
+print(f"Error: The file {input_filename) was not found.")
+exit()
+# Step 3: Create a new image with only the blue channel (remove red and green channels)
+blue_img = img. copy ( )
+blue_img[:, :, 0]
+# Set the red channel to 0
+blue_imgl:, :, 1] = 0 # Set the green channel to 0
+# Step 4: Save the resulting image to the output file
+plt. imsave (output_filename, blue_img)
+# Step 5: Display the modified image
+plt. imshow (blue_ing)
+plt,axis('off') # Hide axes
+plt. show()
+print (f"Modified image saved as {output_filename}")
