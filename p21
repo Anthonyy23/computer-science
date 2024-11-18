@@ -25,7 +25,7 @@ blue_img[:, :, 1] = 0
 plt.imsave (output_filename, blue_img)
 
 
-plt.imshow(blue_ing)
+plt.imshow(blue_img)
 plt.axis('off')
 plt.show()
 print (f"Modified image saved as {output_filename}")
