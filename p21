@@ -11,7 +11,7 @@ input_filename = input("Enter name of the input file: ")
 output_filename = input("Enter name of the output file: ")
 
 try:
-    img = mpimg. imread (input_filename)
+    img = mpimg.imread (input_filename)
 except FileNotFoundError:
     print(f"Error: The file {input_filename) was not found.")
     exit()
@@ -20,12 +20,12 @@ blue_img = img.copy ( )
 blue_img[:, :, 0]
 
 
-blue_img[:, :, 1] = 0 # Set the green channel to 0
+blue_img[:, :, 1] = 0
 
-plt. imsave (output_filename, blue_img)
+plt.imsave (output_filename, blue_img)
 
 
-plt. imshow (blue_ing)
-plt,axis('off') # Hide axes
-plt. show()
+plt.imshow(blue_ing)
+plt.axis('off')
+plt.show()
 print (f"Modified image saved as {output_filename}")
