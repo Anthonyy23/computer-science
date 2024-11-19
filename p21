@@ -6,17 +6,22 @@
 import matplotlib.pyplot as plt 
 import numpy as np
 
+# Load the input image
 input_filename = input("Enter name of the input file: ")
+img = plt.imread(input_filename)
+
+# Create a copy of the image to apply the filter
+blue_img = img.copy()
+
+# Remove the red and green channels to keep only the blue channel
+blue_img[:, :, 0] = 0  # Red channel
+blue_img[:, :, 1] = 0  # Green channel
+
+# Save the modified image
 output_filename = input("Enter name of the output file: ")
+plt.imsave(output_filename, blue_img)
 
-blue_img = img.copy ( )
-blue_img[:, :, 0] = 0
-
-
-blue_img[:, :, 1] = 0
-
-plt.imsave (output_filename, blue_img)
-
-
+# Display the modified image
 plt.imshow(blue_img)
 plt.axis('off')
+plt.show()
