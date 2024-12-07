@@ -1,27 +1,16 @@
 # Name: Anthony Youdakhin
 # Email: ANTHONY.YOUDAKHIN83@myhunter.cuny.edu
-# Date: 11/18/24
-# blue image program
+# Date: 12/7/24
+# Gray flood map
 
-import matplotlib.pyplot as plt 
-import numpy as np
+import turtle
+t1 = turtle.Turtle()
+screen = turtle.Screen()
 
-# Load the input image
-input_filename = input("Enter name of the input file: ")
-img = plt.imread(input_filename)
+for i range(90, -2, -1):
+  t1.forward(25)
+  t1.left(i)
 
-# Create a copy of the image to apply the filter
-blue_img = img.copy()
+screen.exitonclick()
 
-# Remove the red and green channels to keep only the blue channel
-blue_img[:, :, 0] = 0  # Red channel
-blue_img[:, :, 1] = 0  # Green channel
-
-# Save the modified image
-output_filename = input("Enter name of the output file: ")
-plt.imsave(output_filename, blue_img)
-
-# Display the modified image
-plt.imshow(blue_img)
-plt.axis('off')
-plt.show()
+  
