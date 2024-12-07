@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 
 #Read in the data to an array, called elevations:
-elevations = np.loadtxt('elevationsNYC.txt')
+elevations = np.loadtxt('floodMap.png')
 
 #Take the shape (dimensions) of the elevations
 #  and add another dimension to hold the 3 color channels:
