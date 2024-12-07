@@ -3,6 +3,8 @@
 # Date: 12/7/24
 # Print hello world
 
+#include <iostream>
 int main() {
-    cout << "Hello, World!"
+    std::cout << "Hello World!";
+    return 0;
 }
