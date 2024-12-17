@@ -3,22 +3,35 @@
 # Date: December 17th 2024
 # Program: recursive turtle
 
-import turtle
+    .data
+newline: 
+    .asciiz "\n"
 
-def triangle(t, length):
-    if length > 10:
-        for _ in range(3):
-            t.forward(length)
-            t.left(120)
-        triangle(t, length / 2)
+    .text
+    .globl main
 
-def nestedTriangle(t, length):
-    if length > 10:
-        total_distance = 0
-        for _ in range(3):
-            t.forward(length)
-            total_distance += length
-            t.left(120)
-        total_distance += nestedTriangle(t, length / 2)  # Add the distance from recursive call
-        return total_distance
-    return 0
+main:
+    # Initialize the loop variable to 2
+    li $t0, 2          # $t0 = 2 (first number in the sequence)
+
+loop:
+    # Print the current number in $t0
+    li $v0, 1          # Syscall code for print integer
+    move $a0, $t0      # Move current number into $a0 for syscall
+    syscall            # Make syscall to print the integer
+    
+    # Print a newline for better formatting
+    li $v0, 4          # Syscall code for print string
+    la $a0, newline    # Load address of newline string into $a0
+    syscall            # Make syscall to print the newline
+
+    # Increment the value in $t0 by 2
+    addi $t0, $t0, 2   # $t0 = $t0 + 2
+
+    # Check if $t0 is greater than 20, and if so, exit the loop
+    li $t1, 20         # Load 20 into $t1
+    ble $t0, $t1, loop # If $t0 <= 20, continue the loop
+
+    # Exit the program
+    li $v0, 10         # Syscall code for exit
+    syscall            # Make syscall to exit the program
