@@ -3,13 +3,6 @@
 # Date: December 17th 2024
 # Program: loop
 
-    .data
-newline: 
-    .asciiz "\n"
-
-    .text
-    .globl main
-
 main:
     # Initialize the loop variable to 2
     li $t0, 2          # $t0 = 2 (first number in the sequence)
