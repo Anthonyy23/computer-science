@@ -4,9 +4,6 @@
 # Program: recursive turtle
 
 import turtle
-screen = turtle.Screen()
-t = turtle.Turtle()
-
 
 def triangle(t, length):
     if length > 10:
@@ -21,8 +18,4 @@ def nestedTriangle(t, length):
             t.forward(length)
             t.left(120)
         nestedTriangle(t, length / 2)
-
-length = int(input("Enter edge length: "))
-
-triangle(t, length)
 
