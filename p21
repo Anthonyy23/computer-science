@@ -1,18 +1,30 @@
 # Name: Anthony Youdakhin
 # Email: ANTHONY.YOUDAKHIN83@myHunter.cuny.edu
 # Date: December 17th 2024
-# Program: age checker
+# Program: recursive turtle
 
-while True:
-    user_input = input("Enter a non-negative integer: ")
+import turtle
 
-    if user_input.isdigit():
-        number = int(user_input)
-        if number >= 0:
-            break
-        else:
-            print("Invalid input. Please enter a non-negative integer.")
-    else:
-        print("Invalid input. Please enter a non-negative integer.")
+def triangle(t, length):
+    if length > 10:
+        for _ in range(3):
+            t.forward(length)
+            t.left(120)
+        triangle(t, length / 2)
 
-print(f"You entered: {number}")
+def nestedTriangle(t, length):
+    if length > 10:
+        for _ in range(3):
+            t.forward(length)
+            t.left(120)
+        nestedTriangle(t, length / 2)
+
+screen = turtle.Screen()
+t = turtle.Turtle()
+
+length = int(input("Enter edge length: "))
+
+triangle(t, length)
+
+t.hideturtle()
+screen.mainloop()
