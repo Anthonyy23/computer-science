@@ -1,30 +1,46 @@
 # Name: Anthony Youdakhin
 # Email: ANTHONY.YOUDAKHIN83@myHunter.cuny.edu
 # Date: December 17th 2024
-# Program: loop
+# Program: recursive turtle 
 
-main:
-    # Initialize the loop variable to 2
-    li $t0, 2          # $t0 = 2 (first number in the sequence)
+import turtle
+def setUp(t, dist, col):
+    """
+    Takes three parameters, a turtle, t, the distance, dist, 
+    to move the turtle and a color, col, to set the turtle's color.
+    """
+    t.penup()
+    t.forward(dist)
+    t.pendown()
+    t.color(col)
 
-loop:
-    # Print the current number in $t0
-    li $v0, 1          # Syscall code for print integer
-    move $a0, $t0      # Move current number into $a0 for syscall
-    syscall            # Make syscall to print the integer
-    
-    # Print a newline for better formatting
-    li $v0, 4          # Syscall code for print string
-    la $a0, newline    # Load address of newline string into $a0
-    syscall            # Make syscall to print the newline
 
-    # Increment the value in $t0 by 2
-    addi $t0, $t0, 2   # $t0 = $t0 + 2
+def triangle(t, length):
+    if(length > 10):
+        for i in range(0,3):
+            t.forward(length)
+            t.left(120)
+        triangle(t, length/2)
 
-    # Check if $t0 is greater than 20, and if so, exit the loop
-    li $t1, 20         # Load 20 into $t1
-    ble $t0, $t1, loop # If $t0 <= 20, continue the loop
 
-    # Exit the program
-    li $v0, 10         # Syscall code for exit
-    syscall            # Make syscall to exit the program
+def nestedTriangle(t, length):
+    if(length > 10):
+        for i in range(0,3):
+            t.forward(length)
+            t.left(120)
+            nestedTriangle(t, length/2)      
+
+
+def main():
+    n = int(input('Enter length: '))
+
+    tom = turtle.Turtle()
+    setUp(tom, -100, "darkgreen")
+    triangle(tom, n)
+
+    tess = turtle.Turtle()
+    setUp(tess, 100, "steelblue")
+    nestedTriangle(tess, n)
+
+if __name__ == "__main__":
+     main()
