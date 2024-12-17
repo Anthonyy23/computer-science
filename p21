@@ -1,13 +1,30 @@
+#include <iostream>
+using namespace std;
+
+/*
 # Name: Anthony Youdakhin
-# Email: ANTHONY.YOUDAKHIN83@myhunter.cuny.edu
-# Date: 12/7/24
-# Print hello world
+# Email: ANTHONY.YOUDAKHIN83@myHunter.cuny.edu
+# Date: December 17th 2024
+# Program: Seasonal Greeting Based on Month
+*/
 
-#include <iostream>        //The built-in library for input/output
-using namespace std;       //The names of standard definitions
+int main() {
+    int month;
 
-int main()                 //C++ programs all have a main() function
-{
-  cout << "Hello, World!"; //Print "Hello, World!" to the terminal
-  return 0;                //Standard way to end function
+    // User input for month number
+    cout << "Enter month (as a number): ";
+    cin >> month;
+
+    // Check for the season based on the month
+    if (month < 3 || month > 11) {
+        cout << "Happy Winter" << endl;
+    } else if (month >= 3 && month < 7) {
+        cout << "Happy Spring" << endl;
+    } else if (month >= 7 && month < 9) {
+        cout << "Happy Summer" << endl;
+    } else {
+        cout << "Happy Fall" << endl;
+    }
+
+    return 0;
 }
