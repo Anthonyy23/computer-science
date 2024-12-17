@@ -1,12 +1,10 @@
+// Name: Anthony Youdakhin
+// Email: ANTHONY.YOUDAKHIN83@myHunter.cuny.edu
+// Date: December 17th 2024
+// Program: Seasonal Greeting Based on Month
+
 #include <iostream>
 using namespace std;
-
-/*
-# Name: Anthony Youdakhin
-# Email: ANTHONY.YOUDAKHIN83@myHunter.cuny.edu
-# Date: December 17th 2024
-# Program: Seasonal Greeting Based on Month
-*/
 
 int main() {
     int month;
