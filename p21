@@ -10,7 +10,7 @@ def convert(s):
 
      total = 0
      
-     for c in s
+     for c in s:
           total = total * 16
           ascii = ord(c)
           if ord('0') <= ascii <= ord('9'):
@@ -19,7 +19,7 @@ def convert(s):
           elif ord('A') <= ascii <= ord('F'):
                #It's a hex number between 10 and 15, convert and return:
                total = total + ascii - ord('A') + 10
-          elif ord('a') =< ascii <= ord('f'):
+          elif ord('a') <= ascii <= ord('f'):
                #Check if they used lower case:
                #It's a hex number between 10 and 15, convert and return:
                total = total + ascii - ord('a') + 10
@@ -28,9 +28,9 @@ def convert(s):
                return(-1)
      return(total)
 
-def main()
+def main():
     hexString = input("Enter a number in hex: ")
-    prnt("The number in decimal is", convert(hexString))
+    print("The number in decimal is", convert(hexString))
 
 
 #Allow script to be run directly:
