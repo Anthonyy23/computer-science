@@ -72,9 +72,6 @@ def animate(t,lat,lon,wind):
     else:
         t.pensize(1)
         t.color('white')
-    
-    return(t)
-    
     return(t)
 
 def main():
