@@ -51,7 +51,7 @@ def animate(t,lat,lon,wind):
     (i.e. pensize(5) for Category 5, pensize(4) for Category 4, etc.).
 
     """
-
+   
     t.goto(lon,lat)
     t.pendown()
     if (wind > 156):
@@ -72,6 +72,7 @@ def animate(t,lat,lon,wind):
     else:
         t.pensize(1)
         t.color('white')
+    
     return(t)
 
 def main():
