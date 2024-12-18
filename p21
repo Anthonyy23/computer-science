@@ -3,7 +3,7 @@
 # Date: December 17th 2024
 # Program: fix error
 
- def convert(s):
+def convert(s):
      """ Takes a hex string as input.
      Returns decimal equivalent.
      """
